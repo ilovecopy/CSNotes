@@ -1,0 +1,17 @@
+{
+  "name": "CSNotes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ilovecopy <1205611509@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
+    "vuepress": "^2.0.0-beta.49",
+    "vuepress-plugin-md-enhance": "^2.0.0-beta.87"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  }
+}
