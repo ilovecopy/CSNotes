@@ -1,3 +1,3 @@
-# [CSNotes](www.csxiaotang.com)
+# CSNotes
 
 408笔记
