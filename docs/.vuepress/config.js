@@ -2,7 +2,6 @@ const { defaultTheme } = require('@vuepress/theme-default')
 const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance");//markown增强
 const { searchPlugin } = require('@vuepress/plugin-search')
 module.exports = {
-    base: "/CSNotes/",
     title: 'CSNotes',
     plugins: [
         mdEnhancePlugin({
