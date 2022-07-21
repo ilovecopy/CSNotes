@@ -1,6 +1,7 @@
 const { defaultTheme } = require('@vuepress/theme-default')
 const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance");//markown增强
 const { searchPlugin } = require('@vuepress/plugin-search')
+const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
 module.exports = {
     title: 'CSNotes',
     plugins: [
@@ -8,25 +9,24 @@ module.exports = {
             mermaid: true,
             tex: true,
         }),
-        searchPlugin({
-            // 配置项
+        // searchPlugin({
+        //     // 配置项
+        // }),
+        docsearchPlugin({
+            appId: 'N3XTRN5Y4Z',
+            indexName: 'search',
+            apiKey: '4a798099a18e41e2741fe0cbfcd20a18',
         }),
     ],
     theme: defaultTheme({
         lang: 'zh-CN',
-        description: '这是我的第一个 VuePress 站点',
         logo: "/images/avatar.jpeg",
         repo: 'ilovecopy/CSNotes',
         docsDir: 'docs',
-        editLink: true,
         editLinkText: "编辑此页",
         contributors: false,
-        lastUpdated: true,
         lastUpdatedText: '上次更新',
-        contributorsText: '贡献者',
-        colorMode: 'auto',
-        colorModeSwitch: true,
-        smoothScroll: true,
+        colorModeSwitch: false,
         navbar: [
             {
                 text: '数据结构',
