@@ -21,7 +21,7 @@
             </template>
             <template #bottom>
                 <slot name="page-bottom" />
-                你好
+                sjdflkasdjflkasdjflaksdjfnefnajlndfjk<Vssue :options="{ locale: 'zh' }">
             </template>
         </Page>
     </div>

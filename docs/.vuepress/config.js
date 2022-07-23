@@ -21,6 +21,7 @@ module.exports = {
             clientSecret: "18b3e8cc2830a5fb980623e4bf606af2323311a4",
             labels: ["comment"],
             prefix: [""],
+            // autoCreateIssue: true,
         }),
         // docsearchPlugin({
         //     appId: 'N3XTRN5Y4Z',
