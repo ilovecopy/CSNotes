@@ -1,7 +1,10 @@
 const { defaultTheme } = require('@vuepress/theme-default')
-const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance");//markown增强
+const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance");//markown 增强
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
+const { VssuePlugin } = require("@laoergege/vuepress-plugin-vssue-next-compat");
+import css from "../../ node_modules / vssue / dist / vssue.min.css";
+// vssue / dist / vssue.css
 module.exports = {
     title: 'CSNotes',
     plugins: [
@@ -9,14 +12,26 @@ module.exports = {
             mermaid: true,
             tex: true,
         }),
-        // searchPlugin({
-        //     // 配置项
-        // }),
-        docsearchPlugin({
-            appId: 'N3XTRN5Y4Z',
-            indexName: 'search',
-            apiKey: '4a798099a18e41e2741fe0cbfcd20a18',
+        searchPlugin({
+            // 配置项
         }),
+        VssuePlugin({
+            platform: "github",
+            owner: "ilovecopy",
+            repo: "CSNotes",
+            clientId: "7f87443e06058efece7e",
+            clientSecret: "18b3e8cc2830a5fb980623e4bf606af2323311a4",
+            labels: ["comment"],
+            prefix: [""],
+        }),
+        // docsearchPlugin({
+        //     appId: 'N3XTRN5Y4Z',
+        //     indexName: 'search',
+        //     apiKey: 'c91078bed372683bfafe3db149c95c68',
+        //     searchParameters: {
+        //         facetFilters: ['tags:v2'],
+        //     },
+        // }),
     ],
     theme: defaultTheme({
         lang: 'zh-CN',
@@ -26,11 +41,12 @@ module.exports = {
         editLinkText: "编辑此页",
         contributors: false,
         lastUpdatedText: '上次更新',
-        colorModeSwitch: false,
+        colorMode: 'auto',
+        colorModeSwitch: true,
         navbar: [
             {
                 text: '数据结构',
-                link: '/datastructure/001.md',
+                link: '/datastructure/081.md',
             },
             {
                 text: '组成原理',
@@ -47,13 +63,13 @@ module.exports = {
             {
                 text: '常用工具',
                 children: [{
-                    text: "Markdown增强",
+                    text: "Markdown 增强",
                     link: "https://vuepress-theme-hope.github.io/v2/md-enhance/zh/",
                 }, {
-                    text: "VuePress文档",
+                    text: "VuePress 文档",
                     link: "https://v2.vuepress.vuejs.org/zh/",
                 }, {
-                    text: "Github秘籍",
+                    text: "Github 秘籍",
                     link: "https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md",
                 }, {
                     text: "C++",
@@ -78,6 +94,11 @@ module.exports = {
                 text: '第一章',
                 collapsible: true,
                 children: ['/datastructure/001.md'],
+            },
+            {
+                text: '第八章 排序',
+                collapsible: true,
+                children: ['/datastructure/081.md', '/datastructure/082.md', '/datastructure/083.md'],
             }],
             '/os/': [{
                 text: '第三章内存管理',
@@ -116,5 +137,6 @@ module.exports = {
             },
             ],
         },
+        sidebarDepth: 1,
     })
 }
