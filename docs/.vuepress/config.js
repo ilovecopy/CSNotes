@@ -3,8 +3,7 @@ const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance");//markown å¢žå
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
 const { VssuePlugin } = require("@laoergege/vuepress-plugin-vssue-next-compat");
-import css from "../../ node_modules / vssue / dist / vssue.min.css";
-// vssue / dist / vssue.css
+
 module.exports = {
     title: 'CSNotes',
     plugins: [
