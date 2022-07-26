@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-21b07e7f","path":"/network/037.html","title":"3.7 \u5E7F\u57DF\u7F51","lang":"en-US","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"3.7.2 PPP \u534F\u8BAE","slug":"_3-7-2-ppp-\u534F\u8BAE","children":[]}],"git":{"updatedTime":1658580484000},"filePathRelative":"network/037.md"}');export{e as data};

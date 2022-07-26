@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as r,a as e,b as _}from"./app.e4b6bd00.js";const c={},o=e("h1",{id:"_4-7-\u79FB\u52A8-ip",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#_4-7-\u79FB\u52A8-ip","aria-hidden":"true"},"#"),_(" 4.7 \u79FB\u52A8 IP")],-1),s=[o];function n(d,i){return t(),r("div",null,s)}var l=a(c,[["render",n],["__file","047.html.vue"]]);export{l as default};

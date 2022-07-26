@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-7605a102","path":"/datastructure/","title":"d","lang":"en-US","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1658808616000},"filePathRelative":"datastructure/README.md"}');export{t as data};
