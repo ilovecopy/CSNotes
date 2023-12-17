@@ -19,9 +19,11 @@ spellcheck:
     - HTTPS
     - Intel
     - InnoDB
+    - Java
     - JavaScript
     - JSON
     - Linux
+    - LeetCode
     - Markdown
     - Microsoft
     - MongoDB
@@ -37,3 +39,4 @@ spellcheck:
     - Ubuntu
     - URI
     - URL
+    
