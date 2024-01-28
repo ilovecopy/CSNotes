@@ -14,3 +14,4 @@ start.sh
 setting.sh
 docs/.vuepress/styles/palette.scss
 docs/.vuepress/dist
+commitlint.config.js
