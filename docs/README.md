@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.svg
+heroImage: /images/logo.png
 heroText: CSNotes
 tagline: 计算机笔记
 actionText: 快速上手 →
