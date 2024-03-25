@@ -1,0 +1,4 @@
+import{_ as e,o as t,c as a,a as s}from"./app-XWLI5M5X.js";const n={},d=s(`<h1 id="mac-设置" tabindex="-1"><a class="header-anchor" href="#mac-设置"><span>MAC 设置</span></a></h1><div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>#
+sudo nvram SystemAudioVolume=&quot; &quot;
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,2),i=[d];function c(l,r){return t(),a("div",null,i)}const m=e(n,[["render",c],["__file","063.html.vue"]]),u=JSON.parse('{"path":"/studypath/063.html","title":"MAC 设置","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1698592164000},"filePathRelative":"studypath/063.md"}');export{m as comp,u as data};

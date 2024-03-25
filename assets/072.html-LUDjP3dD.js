@@ -1,0 +1,38 @@
+import{_ as e,o as i,c as n,a as s}from"./app-XWLI5M5X.js";const a={},l=s(`<h1 id="事务" tabindex="-1"><a class="header-anchor" href="#事务"><span>事务</span></a></h1><h2 id="一、事务的起源" tabindex="-1"><a class="header-anchor" href="#一、事务的起源"><span>一、事务的起源</span></a></h2><p>小明向小李发了一个 10 元微信红包，小李收下了。在现实世界中，可能大家都会觉得，小明 -10 元，小李 +10 元，但是有没有可能，小李没收到钱，小明却 -10 元呢？为了保证公平性，+10 元和 -10 元要么都进行，要么都不执行。</p><h3 id="_1-1-原子性" tabindex="-1"><a class="header-anchor" href="#_1-1-原子性"><span>1.1 原子性</span></a></h3><h3 id="_1-2-隔离性" tabindex="-1"><a class="header-anchor" href="#_1-2-隔离性"><span>1.2 隔离性</span></a></h3><p>就像操作系统中所说，进程具有异步性，和数据库中的事务正好相反。</p><h2 id="事务的不同状态" tabindex="-1"><a class="header-anchor" href="#事务的不同状态"><span>事务的不同状态</span></a></h2><p>活动的（active）：</p><p>部分提交的（partially commited）：事务操作完成了，但数据所造成的影响还没刷新到磁盘。</p><p>失败的（failed）：</p><p>中止的（aborted）：回滚到了执行事务之前的状态，相当于什么都没做。</p><p>提交的（commited）：修改的数据刷新到磁盘</p><p><img src="https://csnotes.oss-cn-beijing.aliyuncs.com/photos/事务状态转移图.drawio.png" alt="事务状态转移图.drawio"></p><h2 id="事务的四种隔离级别" tabindex="-1"><a class="header-anchor" href="#事务的四种隔离级别"><span>事务的四种隔离级别</span></a></h2><p>串行化（SERIALIZABLE）：当串行化事务读取某些数据后，这些数据将不能被其他事务更改，但可以被读取，直到本事务结束。</p><div class="language-mysql line-numbers-mode" data-ext="mysql" data-title="mysql"><pre class="language-mysql"><code>SET SESSION TRANSACTION ISOLATION LEVEL SERIALIZABLE ;
+START TRANSACTION ;
+SELECT * FROM TIME WHERE A = 1;
+DO SLEEP(7);
+COMMIT;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-mysql line-numbers-mode" data-ext="mysql" data-title="mysql"><pre class="language-mysql"><code>SELECT * FROM TIME WHERE A=&#39;1&#39;;
+UPDATE TIME SET B=&#39;1000&#39; WHERE A=&#39;1&#39;;
+SELECT &#39;已将B设为1000&#39;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://csnotes.oss-cn-beijing.aliyuncs.com/photos/串行化.drawio (2).png" alt="串行化.drawio (2)"></p><p>可重复读（REPEATABLE READ）:串行化读取数据后，会阻止其他事务更改这些数据，而可重复读允许其他事务修改数据，但不可见。</p><div class="language-mysql line-numbers-mode" data-ext="mysql" data-title="mysql"><pre class="language-mysql"><code>SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+START TRANSACTION ;
+SELECT * FROM TIME WHERE A = 1;
+DO SLEEP(7);
+SELECT * FROM TIME WHERE A = 1;
+COMMIT;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-mysql line-numbers-mode" data-ext="mysql" data-title="mysql"><pre class="language-mysql"><code>UPDATE TIME SET B=&#39;1000&#39; WHERE A=&#39;1&#39;;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://csnotes.oss-cn-beijing.aliyuncs.com/photos/可重复读.drawio.png" alt="可重复读.drawio"></p><p>读已提交：在读已提交事务中，你可以读取到，其他事务对数据已经提交的更改，但会忽视其他事务未提交的更改，以确保读取的数据的合理性。</p><p>比如，某个用于修改用户姓名的事务，当用户姓名合理时，该事务提交，不合理时，事务将执行回滚。我们可以使用读已提交事务，只读取上述事务提交的更改，以确保读取到的用户姓名始终是合理的。</p><div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>SET SESSION TRANSACTION ISOLATION LEVEL  READ COMMITTED ;
+START TRANSACTION ;
+SELECT B FROM TIME WHERE A = 1;
+COMMIT;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+START TRANSACTION ;
+UPDATE TIME SET B=1000 WHERE A=1;
+SELECT &#39;B设为1000&#39;;
+DO SLEEP(7);
+
+COMMIT ;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://csnotes.oss-cn-beijing.aliyuncs.com/photos/读已提交.drawio.png" alt="读已提交.drawio"></p><p>读未提交：</p><div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>SET SESSION TRANSACTION ISOLATION LEVEL  READ UNCOMMITTED ;
+START TRANSACTION ;
+SELECT B FROM TIME WHERE A = 1;
+COMMIT;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+START TRANSACTION ;
+UPDATE TIME SET B=1000 WHERE A=1;
+SELECT &#39;B设为1000&#39;;
+DO SLEEP(7);
+
+ROLLBACK ;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://csnotes.oss-cn-beijing.aliyuncs.com/photos/读未提交.drawio.png" alt="读未提交.drawio"></p>`,31),d=[l];function t(c,r){return i(),n("div",null,d)}const E=e(a,[["render",t],["__file","072.html.vue"]]),m=JSON.parse('{"path":"/mysql/072.html","title":"事务","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"一、事务的起源","slug":"一、事务的起源","link":"#一、事务的起源","children":[{"level":3,"title":"1.1 原子性","slug":"_1-1-原子性","link":"#_1-1-原子性","children":[]},{"level":3,"title":"1.2 隔离性","slug":"_1-2-隔离性","link":"#_1-2-隔离性","children":[]}]},{"level":2,"title":"事务的不同状态","slug":"事务的不同状态","link":"#事务的不同状态","children":[]},{"level":2,"title":"事务的四种隔离级别","slug":"事务的四种隔离级别","link":"#事务的四种隔离级别","children":[]}],"git":{"updatedTime":1706326003000},"filePathRelative":"mysql/072.md"}');export{E as comp,m as data};

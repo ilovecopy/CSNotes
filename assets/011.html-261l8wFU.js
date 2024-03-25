@@ -1,0 +1,6 @@
+import{_ as e,o as a,c as s,a as l}from"./app-XWLI5M5X.js";const n={},i=l(`<h1 id="_1-1-数据库基础" tabindex="-1"><a class="header-anchor" href="#_1-1-数据库基础"><span>1.1 数据库基础</span></a></h1><h2 id="_1-1-5-主键" tabindex="-1"><a class="header-anchor" href="#_1-1-5-主键"><span>1.1.5 主键</span></a></h2><p>主键就像人的身份证。</p><ul><li>任意两行都不具有相同的主键值</li><li>每个行都必须有一个主键值（主键列不允许 NULL 值）</li></ul><div class="language-mysql line-numbers-mode" data-ext="mysql" data-title="mysql"><pre class="language-mysql"><code>create database 数据库名;//创建数据库
+show databases;//展示数据库
+show tables;//展示数据库里有多少表
+show columns from 表名;//打印一张表
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,5),t=[i];function d(c,r){return a(),s("div",null,t)}const m=e(n,[["render",d],["__file","011.html.vue"]]),h=JSON.parse('{"path":"/mysql/011.html","title":"1.1 数据库基础","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"1.1.5 主键","slug":"_1-1-5-主键","link":"#_1-1-5-主键","children":[]}],"git":{"updatedTime":1698592164000},"filePathRelative":"mysql/011.md"}');export{m as comp,h as data};
