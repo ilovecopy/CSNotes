@@ -2,8 +2,6 @@ node_modules
 .temp
 .cache
 deploy.sh
-package-lock.json
-package.json
 docs/.vuepress/layouts/Layout.vue
 docs/.vuepress/config.ts
 docs/leetcode/.DS_Store
@@ -15,3 +13,8 @@ setting.sh
 docs/.vuepress/styles/palette.scss
 docs/.vuepress/dist
 commitlint.config.js
+*.gz
+.yarnrc.yml
+docs/.vuepress/dist
+yarn-error.log
+.editorconfig
