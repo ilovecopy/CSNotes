@@ -1,6 +1,7 @@
 node_modules
 .temp
 .cache
+.github/workflows/deploy-docs.yml
 deploy.sh
 docs/.vuepress/layouts/Layout.vue
 docs/.vuepress/config.ts
