@@ -17,7 +17,7 @@ features:
 - title: MySQL
   details: 索引、事务、锁。
 - title: Java
-  details: 
+  details: SpringBoot。
 footer: MIT Licensed | Copyright © 2023-present ilovecopy
 
 ---
