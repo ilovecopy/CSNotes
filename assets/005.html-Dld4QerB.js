@@ -1,0 +1,11 @@
+import{_ as e,c as n,o as a,b as s}from"./app-CehCU-_V.js";const i={},l=s(`<h1 id="_1-5-maven" tabindex="-1"><a class="header-anchor" href="#_1-5-maven"><span>1.5 Maven</span></a></h1><p>Maven 是一款管理和构建 Java 的工具。</p><p>依赖管理：方便的管理项目依赖的资源（JAR 包），避免版本冲突问题。</p><p>统一项目结构：提供标准、统一的项目结构。</p><p>标准化项目构建：跨平台。</p><div class="custom-container tip"><p class="custom-container-title">Maven 作用</p><p>自动下载依赖、可以打包。</p></div><h2 id="maven-坐标" tabindex="-1"><a class="header-anchor" href="#maven-坐标"><span>Maven 坐标</span></a></h2><p>坐标是资源的唯一标识。</p><p>GAV 规则：</p><p>GroupID 格式：com.{公司/BU}.业务线。[子业务线]，最多 4 级。</p><p>ArtifactID 格式：产品线名 - 模块名。</p><p>Maven 可以保证项目之间的一致性。</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre class="language-text"><code><span class="line">src/</span>
+<span class="line">├── main/</span>
+<span class="line">│   ├── java/</span>
+<span class="line">│   │   </span>
+<span class="line">│   └── resources/</span>
+<span class="line">└── test/</span>
+<span class="line">    └── java/</span>
+<span class="line">    │   </span>
+<span class="line">    └── resources/</span>
+<span class="line">pom.xml</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>默认情况下，Maven 使用 Java8 编译我的项目。</p><h2 id="spring-容器" tabindex="-1"><a class="header-anchor" href="#spring-容器"><span>Spring 容器</span></a></h2><p>普通容器只能用来存储，没有更多功能：List、Set</p><p>复杂容器 Servlet</p>`,17),p=[l];function t(c,r){return a(),n("div",null,p)}const v=e(i,[["render",t],["__file","005.html.vue"]]),m=JSON.parse('{"path":"/ssm/005.html","title":"1.5 Maven","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"Maven 坐标","slug":"maven-坐标","link":"#maven-坐标","children":[]},{"level":2,"title":"Spring 容器","slug":"spring-容器","link":"#spring-容器","children":[]}],"git":{"updatedTime":null},"filePathRelative":"ssm/005.md"}');export{v as comp,m as data};

@@ -1,0 +1,17 @@
+import{_ as s,c as e,o as n,b as a}from"./app-CehCU-_V.js";const i={},l=a(`<h1 id="_10-1-动态规划" tabindex="-1"><a class="header-anchor" href="#_10-1-动态规划"><span>10.1 动态规划</span></a></h1><h2 id="_53-最大子数组和" tabindex="-1"><a class="header-anchor" href="#_53-最大子数组和"><span>53.最大子数组和</span></a></h2><p>给你一个整数数组 <code>nums</code> ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p><p><strong>子数组</strong> 是数组中的一个连续部分。</p><p><strong>示例 1：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre class="language-text"><code><span class="line">输入：nums = [-2,1,-3,4,-1,2,1,-5,4]</span>
+<span class="line">输出：6</span>
+<span class="line">解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>示例 2：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre class="language-text"><code><span class="line">输入：nums = [1]</span>
+<span class="line">输出：1</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>示例 3：</strong></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre class="language-text"><code><span class="line">输入：nums = [5,4,-1,7,8]</span>
+<span class="line">输出：23</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>解答：遍历一次，求出以每个元素结尾的最大和。对于每个元素，如果该元素之前元素的最大和&lt;0，那么该元素的最大和为自己。否则为最大和 + 自己。记录一每个元素为结尾的最大值。</p><figure><img src="https://csnotes.oss-cn-beijing.aliyuncs.com/photos/最大子数组和-20230226102924248.gif" alt="最大子数组和" tabindex="0" loading="lazy"><figcaption>最大子数组和</figcaption></figure><div class="language-c++ line-numbers-mode" data-highlighter="prismjs" data-ext="c++" data-title="c++"><pre class="language-c++"><code><span class="line">int maxSubArray(vector&lt;int&gt; &amp;nums)</span>
+<span class="line">    {</span>
+<span class="line">        int pre = 0, ans = 0;</span>
+<span class="line">        for (auto &amp;num : nums)</span>
+<span class="line">        {</span>
+<span class="line">            pre = max(pre + num, num);</span>
+<span class="line">            ans = max(ans, pre);</span>
+<span class="line">        }</span>
+<span class="line">    }</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,13),t=[l];function r(d,c){return n(),e("div",null,t)}const u=s(i,[["render",r],["__file","101.html.vue"]]),m=JSON.parse('{"path":"/datastructure/101.html","title":"10.1 动态规划","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"53.最大子数组和","slug":"_53-最大子数组和","link":"#_53-最大子数组和","children":[]}],"git":{"updatedTime":1698592164000},"filePathRelative":"datastructure/101.md"}');export{u as comp,m as data};
