@@ -18,7 +18,7 @@ features:
   details: 索引、事务、锁。
 - title: Java
   details: SpringBoot。
-footer: MIT Licensed | Copyright © 2023-present ilovecopy
-
+footer: <a href="https://beian.miit.gov.cn" style="color:#8094a8">桂ICP备2024037052号-1</a>
+footerHtml: true
 ---
 
