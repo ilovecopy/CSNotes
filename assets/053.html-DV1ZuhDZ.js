@@ -1,0 +1,49 @@
+import{_ as a,c as n,a as e,o as r}from"./app-DKkA6jZv.js";const t={};function l(p,s){return r(),n("div",null,s[0]||(s[0]=[e(`<h1 id="_5-3-二叉树的遍历和线索二叉树" tabindex="-1"><a class="header-anchor" href="#_5-3-二叉树的遍历和线索二叉树"><span>5.3 二叉树的遍历和线索二叉树</span></a></h1><h2 id="_5-3-1-二叉树的遍历" tabindex="-1"><a class="header-anchor" href="#_5-3-1-二叉树的遍历"><span>5.3.1 二叉树的遍历</span></a></h2><h3 id="先序遍历" tabindex="-1"><a class="header-anchor" href="#先序遍历"><span>先序遍历</span></a></h3><div class="language-c++ line-numbers-mode" data-highlighter="prismjs" data-ext="c++"><pre><code class="language-c++"><span class="line">void preorder(TreeNode *root, vector&lt;int&gt; &amp;res)</span>
+<span class="line">    {</span>
+<span class="line">        if (!root)</span>
+<span class="line">        {</span>
+<span class="line">            return;</span>
+<span class="line">        }</span>
+<span class="line">        res.push_back(root-&gt;val);</span>
+<span class="line">        preorder(root-&gt;left, res);</span>
+<span class="line">        preorder(root-&gt;right, res);</span>
+<span class="line">    }</span>
+<span class="line">    vector&lt;int&gt; preorderTraversal(TreeNode *root)</span>
+<span class="line">    {</span>
+<span class="line">        vector&lt;int&gt; res;</span>
+<span class="line">        preorder(root, res);</span>
+<span class="line">        return res;</span>
+<span class="line">    }</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"></div></div><h3 id="中序遍历" tabindex="-1"><a class="header-anchor" href="#中序遍历"><span>中序遍历</span></a></h3><div class="language-c++ line-numbers-mode" data-highlighter="prismjs" data-ext="c++"><pre><code class="language-c++"><span class="line">void inorder(TreeNode *root, vector&lt;int&gt; &amp;res)</span>
+<span class="line">    {</span>
+<span class="line">        if (!root)</span>
+<span class="line">        {</span>
+<span class="line">            return;</span>
+<span class="line">        }</span>
+<span class="line">        inorder(root-&gt;left, res);</span>
+<span class="line">        res.push_back(root-&gt;val);</span>
+<span class="line">        inorder(root-&gt;right, res);</span>
+<span class="line">    };</span>
+<span class="line">    vector&lt;int&gt; inorderTraversal(TreeNode *root)</span>
+<span class="line">    {</span>
+<span class="line">        vector&lt;int&gt; res;</span>
+<span class="line">        inorder(root, res);</span>
+<span class="line">        return res;</span>
+<span class="line">    }</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"></div></div><h3 id="后序遍历" tabindex="-1"><a class="header-anchor" href="#后序遍历"><span>后序遍历</span></a></h3><div class="language-c++ line-numbers-mode" data-highlighter="prismjs" data-ext="c++"><pre><code class="language-c++"><span class="line">void postorder(TreeNode *root, vector&lt;int&gt; &amp;res)</span>
+<span class="line">    {</span>
+<span class="line">        if (!root)</span>
+<span class="line">        {</span>
+<span class="line">            return;</span>
+<span class="line">        }</span>
+<span class="line">        postorder(root-&gt;left, res);</span>
+<span class="line">        postorder(root-&gt;right, res);</span>
+<span class="line">        res.push_back(root-&gt;val);</span>
+<span class="line">    }</span>
+<span class="line">    vector&lt;int&gt; postorderTraversal(TreeNode *root)</span>
+<span class="line">    {</span>
+<span class="line">        vector&lt;int&gt; res;</span>
+<span class="line">        postorder(root, res);</span>
+<span class="line">        return res;</span>
+<span class="line">    }</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"></div></div><h3 id="层次遍历" tabindex="-1"><a class="header-anchor" href="#层次遍历"><span>层次遍历</span></a></h3><p>队头出队，孩子入队</p><h3 id="由遍历序列构造二叉树" tabindex="-1"><a class="header-anchor" href="#由遍历序列构造二叉树"><span>由遍历序列构造二叉树</span></a></h3><p>由（先序遍历、后序遍历、层次遍历）三选一，加上中序遍历可以唯一确定一棵二叉树。</p><h2 id="_5-3-2-线索二叉树" tabindex="-1"><a class="header-anchor" href="#_5-3-2-线索二叉树"><span>5.3.2 线索二叉树</span></a></h2><p>加快查找结点前驱和后继的速度。</p><table><thead><tr><th>树</th><th>森林</th><th>二叉树</th></tr></thead><tbody><tr><td>先根遍历</td><td>先序遍历</td><td>先序遍历</td></tr><tr><td>后根遍历</td><td>中序遍历</td><td>中序遍历</td></tr></tbody></table>`,15)]))}const o=a(t,[["render",l]]),c=JSON.parse('{"path":"/datastructure/053.html","title":"5.3 二叉树的遍历和线索二叉树","lang":"zh-CN","frontmatter":{},"git":{"updatedTime":1698592164000,"contributors":[{"name":"ilovecopy","username":"ilovecopy","email":"1205611509@qq.com","commits":1,"url":"https://github.com/ilovecopy"}],"changelog":[{"hash":"2be1877336d36add6192906de44e87ab5b1df4ec","time":1698592164000,"email":"1205611509@qq.com","author":"ilovecopy","message":"add"}]},"filePathRelative":"datastructure/053.md"}');export{o as comp,c as data};
