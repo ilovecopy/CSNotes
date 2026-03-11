@@ -4,7 +4,6 @@ node_modules
 .github/workflows/deploy-docs.yml
 deploy.sh
 docs/.vuepress/layouts/Layout.vue
-docs/.vuepress/config.ts
 docs/leetcode/.DS_Store
 docs/os/.DS_Store
 docs/.vuepress/client.ts
