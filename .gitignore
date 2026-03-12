@@ -18,3 +18,5 @@ commitlint.config.js
 docs/.vuepress/dist
 yarn-error.log
 .editorconfig
+.DS_Store
+package-lock.json
