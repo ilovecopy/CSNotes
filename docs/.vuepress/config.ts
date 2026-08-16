@@ -32,10 +32,6 @@ export default defineUserConfig({
         link: "/todo/001.md",
       },
       {
-        text: "LeetCode",
-        link: "/leetcode/001.md",
-      },
-      {
         text: "数据结构",
         link: "/datastructure/011.md",
       },
@@ -67,46 +63,10 @@ export default defineUserConfig({
         text: "React",
         link: "/react/001.md",
       },
-      // {
-      //   text: "Redis",
-      //   link: "/redis/011.md",
-      // },
-      // {
-      //   text: "学习路线",
-      //   link: "/studypath/011.md",
-      // },
-      // {
-      //  text:"年度总结",
-      //  link:"/yearplan/000.md"
-      // },
-      // {
-      //     text: '常用工具',
-      //     children: [{
-      //         text: "Markdown 增强",
-      //         link: "https://plugin-md-enhance.vuejs.press/zh/",
-      //     }, {
-      //         text: "VuePress 文档",
-      //         link: "https://v2.vuepress.vuejs.org/zh/",
-      //     }, {
-      //         text: "Github 秘籍",
-      //         link: "https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md",
-      //     }, {
-      //         text: "C++",
-      //         link: "https://www.bilibili.com/video/BV1Ps411w73m?share_source=copy_web",
-      //     },
-      //     {
-      //         text: "LeetCode 高频",
-      //         link: "https://codetop.cc/",
-      //     },
-      //     {
-      //         text: "评论插件",
-      //         link: "https://plugin-comment2.vuejs.press/zh/",
-      //     },
-      //     {
-      //         text: "代码复制插件",
-      //         link: "https://plugin-copy-code2.vuejs.press/zh/",
-      //     }],
-      // },
+      {
+        text: "学习路线",
+        link: "/studypath/011.md",
+      },
       {
         text: "实用工具",
         link: "/others/001.md",
@@ -115,11 +75,12 @@ export default defineUserConfig({
     sidebar: {
       "/java/": [
         {
-          text: "第一章 Java基础类型",
+          text: "第一章 Java 基础",
           collapsible: true,
           children: [
             "/java/001.md",
             "/java/002.md",
+            "/java/003.md",
             "/java/004.md",
             "/java/005.md",
             "/java/006.md",
@@ -129,6 +90,7 @@ export default defineUserConfig({
             "/java/010.md",
             "/java/011.md",
             "/java/0111.md",
+            "/java/0112.md",
             "/java/012.md",
             "/java/013.md",
             "/java/014.md",
@@ -142,17 +104,50 @@ export default defineUserConfig({
         {
           text: "第二章 设计模式",
           collapsible: true,
-          children: ["/java/021.md","/java/022.md","/java/023.md"],
+          children: [
+            "/java/021.md",
+            "/java/022.md",
+            "/java/023.md",
+            "/java/024.md",
+            "/java/025.md",
+          ],
         },
         {
-          text: "第四章",
+          text: "第三章 异常与多线程",
+          collapsible: true,
+          children: [
+            "/java/031.md",
+            "/java/032.md",
+          ],
+        },
+        {
+          text: "第四章 JVM",
           collapsible: true,
           children: ["/java/041.md"],
         },
         {
-          text: "第六章",
+          text: "第六章 面向对象",
           collapsible: true,
-          children: ["/java/061.md", "/java/062.md", "/java/063.md"],
+          children: [
+            "/java/061.md",
+            "/java/062.md",
+            "/java/063.md",
+          ],
+        },
+        {
+          text: "第七章 RPC",
+          collapsible: true,
+          children: ["/java/071.md"],
+        },
+        {
+          text: "第八章 多线程进阶",
+          collapsible: true,
+          children: ["/java/081.md"],
+        },
+        {
+          text: "第九章 工具类",
+          collapsible: true,
+          children: ["/java/091.md"],
         },
       ],
       "/ssm/": [
@@ -464,7 +459,7 @@ export default defineUserConfig({
       ],
       "/database/": [
         {
-          text: "第一章 SQL语法",
+          text: "第一章 SQL 语法",
           collapsible: true,
           children: [
             "/database/011.md",
@@ -613,7 +608,7 @@ export default defineUserConfig({
         {
           text: "职场",
           collapsible: true,
-          children: ["/zhichang/000.md"],
+          children: ["/zhichang/001.md"],
         },
       ],
       "/others/": [
@@ -638,10 +633,11 @@ export default defineUserConfig({
 
   plugins: [
     mdEnhancePlugin({
-      mermaid: true,
+      // mermaid: true,
     }),
     commentPlugin({
       provider: "Giscus",
+      comment: true,
       darkTheme: "dark_protanopia",
       lightTheme: "light_protanopia",
       repo: "ilovecopy/CSNotes",

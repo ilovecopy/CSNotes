@@ -1,22 +1,67 @@
-node_modules
-.temp
-.cache
-.github/workflows/deploy-docs.yml
-deploy.sh
-docs/.vuepress/layouts/Layout.vue
-docs/leetcode/.DS_Store
-docs/os/.DS_Store
-docs/.vuepress/client.ts
+# Dependencies
+node_modules/
+.yarn/
+.pnpm/
+.yarnrc.yml
 yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Build outputs
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/
+
+# Runtime data
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files
+*.tmp
+*.temp
+
+# Deployment scripts (can be regenerated)
+deploy.sh
 start.sh
 setting.sh
+
+# Custom configuration files
+docs/.vuepress/client.ts
 docs/.vuepress/styles/palette.scss
-docs/.vuepress/dist
+docs/.vuepress/layouts/Layout.vue
 commitlint.config.js
+
+# Compression files
 *.gz
-.yarnrc.yml
-docs/.vuepress/dist
-yarn-error.log
-.editorconfig
-.DS_Store
-package-lock.json
+*.zip
+*.tar
+
+# Specific files to ignore
+docs/leetcode/.DS_Store
+docs/os/.DS_Store

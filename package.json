@@ -1,0 +1,67 @@
+{
+  "name": "csnotes",
+  "version": "2.0.0",
+  "description": "计算机科学学习笔记 - 涵盖数据结构、算法、操作系统、网络、Java、React 等核心计算机科学知识",
+  "keywords": [
+    "computer-science",
+    "learning-notes",
+    "vuepress",
+    "documentation",
+    "cs-notes",
+    "algorithm",
+    "data-structure"
+  ],
+  "homepage": "https://ilovecopy.github.io/CSNotes",
+  "bugs": {
+    "url": "https://github.com/ilovecopy/CSNotes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilovecopy/CSNotes.git"
+  },
+  "license": "MIT",
+  "author": "小双 <tangjincheng@example.com>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "preview": "vuepress preview docs",
+    "deploy": "bash deploy.sh",
+    "clean": "rm -rf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist",
+    "lint": "prettier --check \"docs/**/*.md\"",
+    "format": "prettier --write \"docs/**/*.md\"",
+    "serve": "serve docs/.vuepress/dist",
+    "prepare": "husky",
+    "start": "npm run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.26",
+    "@vuepress/plugin-comment": "^2.0.0-rc.130",
+    "@vuepress/plugin-copy-code": "^2.0.0-rc.106",
+    "@vuepress/plugin-markdown-image": "^2.0.0-rc.106",
+    "@vuepress/plugin-palette": "^2.0.0-rc.106",
+    "@vuepress/plugin-search": "^2.0.0-rc.106",
+    "@vuepress/theme-default": "^2.0.0-rc.106",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "mermaid": "^11.13.0",
+    "prettier": "^3.3.3",
+    "sass-embedded": "^1.98.0",
+    "vuepress": "^2.0.0-rc.26"
+  },
+  "dependencies": {
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.89"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "lint-staged": {
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}
