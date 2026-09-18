@@ -30,6 +30,9 @@
     "clean": "rm -rf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist",
     "lint": "prettier --check \"docs/**/*.md\"",
     "format": "prettier --write \"docs/**/*.md\"",
+    "ac:lint": "autocorrect --lint .",
+    "ac:fix": "autocorrect --fix .",
+    "ci": "npm run lint && npm run ac:lint && npm run build",
     "serve": "serve docs/.vuepress/dist",
     "prepare": "husky",
     "start": "npm run dev"
@@ -61,7 +64,8 @@
   },
   "lint-staged": {
     "*.md": [
-      "prettier --write"
+      "prettier --write",
+      "autocorrect --fix"
     ]
   }
 }
