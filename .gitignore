@@ -3,9 +3,10 @@ node_modules/
 .yarn/
 .pnpm/
 .yarnrc.yml
-yarn.lock
-package-lock.json
-pnpm-lock.yaml
+# 项目固定用 npm，提交 package-lock.json 保证 CI 可复现（setup-node@v4 强制要求有 lockfile 才能启用 cache）
+# yarn.lock
+# package-lock.json
+# pnpm-lock.yaml
 
 # Build outputs
 docs/.vuepress/.temp/
@@ -52,7 +53,8 @@ start.sh
 setting.sh
 
 # Custom configuration files
-docs/.vuepress/client.ts
+# 自定义 client.ts 必须提交，里面有 CommentService Layout 注册（VuePress 构建期必须读）
+# docs/.vuepress/client.ts
 docs/.vuepress/styles/palette.scss
 docs/.vuepress/layouts/Layout.vue
 commitlint.config.js
