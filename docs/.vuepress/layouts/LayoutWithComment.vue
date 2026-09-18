@@ -1,7 +1,11 @@
 <template>
   <ThemeDefaultLayout>
     <template #page-bottom>
-      <CommentService v-if="shouldShowComment" :darkmode="!!isDarkMode" />
+      <CommentService
+        v-if="shouldShowComment"
+        :darkmode="isDarkMode"
+        :theme="isDarkMode ? 'dark_dimmed' : 'light'"
+      />
     </template>
   </ThemeDefaultLayout>
 </template>
@@ -21,24 +25,21 @@ const unbindListeners = shallowRef<(() => void) | null>(null);
 const detectDarkMode = (): boolean => {
   if (typeof window === "undefined") return false;
   const el = document.documentElement;
-  return (
-    el.getAttribute("data-theme") === "dark" ||
-    el.classList.contains("dark") ||
-    el.getAttribute("theme") === "dark" ||
-    window.matchMedia?.("(prefers-color-scheme: dark)").matches === true
-  );
+  const attr = (el.getAttribute("data-theme") || "").toLowerCase();
+  if (attr === "dark") return true;
+  if (attr === "light") return false;
+  const cls = el.classList;
+  if (cls.contains("dark")) return true;
+  if (cls.contains("light")) return false;
+  const themeAttr = (el.getAttribute("theme") || "").toLowerCase();
+  if (themeAttr === "dark") return true;
+  if (themeAttr === "light") return false;
+  return false;
 };
 
 onMounted(() => {
   isDarkMode.value = detectDarkMode();
   if (typeof window === "undefined") return;
-
-  const mql = window.matchMedia?.("(prefers-color-scheme: dark)");
-  const onMedia = () => {
-    isDarkMode.value = detectDarkMode();
-  };
-  if (mql?.addEventListener) mql.addEventListener("change", onMedia);
-  else if (mql?.addListener) mql.addListener(onMedia);
 
   const observer = new MutationObserver(() => {
     isDarkMode.value = detectDarkMode();
@@ -50,8 +51,6 @@ onMounted(() => {
 
   unbindListeners.value = () => {
     observer.disconnect();
-    if (mql?.removeEventListener) mql.removeEventListener("change", onMedia);
-    else if (mql?.removeListener) mql.removeListener(onMedia);
   };
 });
 
