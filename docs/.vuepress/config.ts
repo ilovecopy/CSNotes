@@ -25,7 +25,7 @@ export default defineUserConfig({
     editLinkText: "编辑此页",
     lastUpdatedText: "上次更新",
     contributors: false,
-    sidebarDepth: 1,
+    sidebarDepth: 2,
     navbar: [
       {
         text: "TODO",
@@ -94,22 +94,22 @@ export default defineUserConfig({
     ],
     sidebar: {
   "/java/": [
-    { text: "第一阶段 语言基石：OOP 与关键字", children: ["/java/0101.md", "/java/0102.md", "/java/0103.md", "/java/0104.md", "/java/0105.md", "/java/0106.md", "/java/0107.md", "/java/0108.md", "/java/0109.md", "/java/0110.md", "/java/0111.md", "/java/0112.md", "/java/0113.md", "/java/0114.md", "/java/0115.md", "/java/0116.md"] },
-    { text: "第二阶段 集合框架与常用工具类", children: ["/java/0201.md", "/java/0202.md", "/java/0203.md", "/java/0204.md", "/java/0205.md", "/java/0206.md", "/java/0207.md", "/java/0208.md", "/java/0209.md", "/java/0210.md", "/java/0211.md", "/java/0212.md"] },
-    { text: "第三阶段 设计模式（Summer IOC/AOP 核心思想）", children: ["/java/0301.md", "/java/0302.md", "/java/0303.md", "/java/0304.md"] },
-    { text: "第四阶段 异常处理机制", children: ["/java/0401.md", "/java/0402.md"] },
-    { text: "第五阶段 并发编程", children: ["/java/0501.md", "/java/0502.md"] },
-    { text: "第六阶段 JVM 内存模型与 GC（占位：待补）", children: [] },
-    { text: "第七阶段 网络通信与 RPC（造 Summer-RPC）", children: ["/java/0701.md"] },
-    { text: "第八阶段 消息队列 MQ（造 Summer-MQ）", children: ["/java/0801.md"] }
+    { text: "第一章 语言基石：OOP 与关键字", children: ["/java/0101.md", "/java/0102.md", "/java/0103.md", "/java/0104.md", "/java/0105.md", "/java/0106.md", "/java/0107.md", "/java/0108.md", "/java/0109.md", "/java/0110.md", "/java/0111.md", "/java/0112.md", "/java/0113.md", "/java/0114.md", "/java/0115.md", "/java/0116.md"] },
+    { text: "第二章 集合框架与常用工具类", children: ["/java/0201.md", "/java/0202.md", "/java/0203.md", "/java/0204.md", "/java/0205.md", "/java/0206.md", "/java/0207.md", "/java/0208.md", "/java/0209.md", "/java/0210.md", "/java/0211.md", "/java/0212.md"] },
+    { text: "第三章 设计模式（Summer IOC/AOP 核心思想）", children: ["/java/0301.md", "/java/0302.md", "/java/0303.md", "/java/0304.md"] },
+    { text: "第四章 异常处理机制", children: ["/java/0401.md", "/java/0402.md"] },
+    { text: "第五章 并发编程", children: ["/java/0501.md", "/java/0502.md"] },
+    { text: "第六章 JVM 内存模型与 GC", children: ["/java/0601.md","/java/0602.md","/java/0603.md","/java/0604.md","/java/0605.md","/java/0606.md"] },
+    { text: "第七章 网络通信与 RPC（造 Summer-RPC）", children: ["/java/0701.md"] },
+    { text: "第八章 消息队列 MQ（造 Summer-MQ）", children: ["/java/0801.md"] }
   ],
   "/ssm/": [
-    { text: "第一阶段 Spring 核心（Summer IOC & AOP）", children: ["/ssm/0101.md", "/ssm/0102.md", "/ssm/0103.md", "/ssm/0104.md", "/ssm/0105.md", "/ssm/0106.md", "/ssm/0107.md", "/ssm/0108.md"] },
-    { text: "第二阶段 SpringMVC Web 层（Summer-MVC）", children: ["/ssm/0201.md", "/ssm/0202.md", "/ssm/0203.md", "/ssm/0204.md", "/ssm/0205.md", "/ssm/0206.md"] },
-    { text: "第三阶段 MyBatis 数据访问（MineBatis 对照）", children: ["/ssm/0301.md", "/ssm/0302.md", "/ssm/0303.md", "/ssm/0304.md", "/ssm/0305.md"] },
-    { text: "第四阶段 SpringBoot 自动装配（Summer-Boot）", children: ["/ssm/0401.md"] },
-    { text: "第五阶段 单元测试（JUnit & Mock）", children: ["/ssm/0501.md"] },
-    { text: "第六阶段 SpringCloud 微服务（Summer-Cloud）", children: ["/ssm/0601.md", "/ssm/0602.md", "/ssm/0603.md", "/ssm/0604.md", "/ssm/0605.md", "/ssm/0606.md"] }
+    { text: "第一章 Spring 核心（Summer IOC & AOP）", children: ["/ssm/0101.md", "/ssm/0102.md", "/ssm/0103.md", "/ssm/0104.md", "/ssm/0105.md", "/ssm/0106.md", "/ssm/0107.md", "/ssm/0108.md"] },
+    { text: "第二章 SpringMVC Web 层（Summer-MVC）", children: ["/ssm/0201.md", "/ssm/0202.md", "/ssm/0203.md", "/ssm/0204.md", "/ssm/0205.md", "/ssm/0206.md"] },
+    { text: "第三章 MyBatis 数据访问（MineBatis 对照）", children: ["/ssm/0301.md", "/ssm/0302.md", "/ssm/0303.md", "/ssm/0304.md", "/ssm/0305.md"] },
+    { text: "第四章 SpringBoot 自动装配（Summer-Boot）", children: ["/ssm/0401.md"] },
+    { text: "第五章 单元测试（JUnit & Mock）", children: ["/ssm/0501.md"] },
+    { text: "第六章 SpringCloud 微服务（Summer-Cloud）", children: ["/ssm/0601.md", "/ssm/0602.md", "/ssm/0603.md", "/ssm/0604.md", "/ssm/0605.md", "/ssm/0606.md"] }
   ],
   "/react/": [
     { text: "第一章 react", children: ["/react/0101.md", "/react/0102.md", "/react/0103.md", "/react/0104.md", "/react/0105.md", "/react/0106.md", "/react/0107.md"] }
@@ -135,7 +135,7 @@ export default defineUserConfig({
     { text: "第八章 排序", children: ["/datastructure/0801.md", "/datastructure/0802.md", "/datastructure/0803.md", "/datastructure/0804.md", "/datastructure/0805.md", "/datastructure/0806.md"] },
     { text: "第九章 贪心算法", children: ["/datastructure/0901.md"] },
     { text: "第十章 动态规划", children: ["/datastructure/1001.md"] },
-    { text: "第十二章 分治与回溯", children: ["/datastructure/1101.md"] }
+    { text: "第十一章 分治与回溯", children: ["/datastructure/1101.md"] }
   ],
   "/os/": [
     { text: "第一章 计算机系统概述", children: ["/os/0101.md", "/os/0102.md", "/os/0103.md", "/os/0104.md", "/os/0105.md"] },
@@ -152,55 +152,58 @@ export default defineUserConfig({
     { text: "第四章 网络层", children: ["/network/0401.md", "/network/0402.md", "/network/0403.md", "/network/0404.md", "/network/0405.md", "/network/0406.md", "/network/0407.md", "/network/0408.md"] },
     { text: "第五章 传输层", children: ["/network/0501.md", "/network/0502.md", "/network/0503.md", "/network/0504.md"] },
     { text: "第六章 应用层", children: ["/network/0601.md", "/network/0602.md", "/network/0603.md", "/network/0604.md", "/network/0605.md"] },
-    { text: "HTTP", children: ["/network/0701.md", "/network/0702.md", "/network/0703.md", "/network/0704.md", "/network/0705.md"] },
-    { text: "网络安全", children: ["/network/0801.md"] }
+    { text: "第七章 HTTP 协议", children: ["/network/0701.md", "/network/0702.md", "/network/0703.md", "/network/0704.md", "/network/0705.md"] },
+    { text: "第八章 网络安全", children: ["/network/0801.md"] }
   ],
   "/database/": [
-    { text: "第一阶段 SQL 语法基础", children: ["/database/0101.md", "/database/0102.md", "/database/0103.md", "/database/0104.md", "/database/0105.md", "/database/0106.md", "/database/0107.md"] },
-    { text: "第二阶段 SQL 执行链路", children: ["/database/0201.md", "/database/0202.md"] },
-    { text: "第三阶段 InnoDB 存储/行格式/页/BufferPool", children: ["/database/0301.md", "/database/0302.md", "/database/0303.md", "/database/0304.md", "/database/0305.md", "/database/0306.md"] },
-    { text: "第四阶段 索引与数据结构", children: ["/database/0401.md", "/database/0402.md", "/database/0403.md", "/database/0404.md", "/database/0405.md", "/database/0406.md", "/database/0407.md"] },
-    { text: "第五阶段 事务/MVCC/锁/隔离级别", children: ["/database/0501.md", "/database/0502.md", "/database/0503.md", "/database/0504.md", "/database/0505.md"] },
-    { text: "第六阶段 预写日志 WAL 与崩溃恢复", children: ["/database/0601.md","/database/0602.md","/database/0603.md"] },
-    { text: "第七阶段 数据建模与范式", children: ["/database/0701.md", "/database/0702.md"] },
-    { text: "第八阶段 数据库概念全景", children: ["/database/0801.md"] },
-    { text: "第九阶段 常见面试题专题（占位：待补）", children: [] }
+    { text: "第一章 SQL 语法基础", children: ["/database/0101.md", "/database/0102.md", "/database/0103.md", "/database/0104.md", "/database/0105.md", "/database/0106.md", "/database/0107.md", "/database/0108.md"] },
+    { text: "第二章 SQL 执行链路", children: ["/database/0201.md", "/database/0202.md", "/database/0206.md", "/database/0207.md"] },
+    { text: "第三章 InnoDB 存储/行格式/页/BufferPool", children: ["/database/0301.md", "/database/0302.md", "/database/0303.md", "/database/0304.md", "/database/0305.md", "/database/0306.md"] },
+    { text: "第四章 索引与数据结构", children: ["/database/0401.md", "/database/0402.md", "/database/0403.md", "/database/0404.md", "/database/0405.md", "/database/0406.md", "/database/0407.md", "/database/0409.md"] },
+    { text: "第五章 事务/MVCC/锁/隔离级别", children: ["/database/0501.md", "/database/0502.md", "/database/0503.md", "/database/0504.md", "/database/0505.md"] },
+    { text: "第六章 预写日志 WAL 与崩溃恢复", children: ["/database/0601.md","/database/0602.md","/database/0603.md","/database/0604.md","/database/0605.md","/database/0606.md"] },
+    { text: "第七章 数据建模与范式", children: ["/database/0701.md", "/database/0702.md"] },
+    { text: "第八章 数据库概念全景", children: ["/database/0801.md"] },
+    { text: "第九章 常见面试题专题", children: ["/database/0901.md"] }
   ],
   "/leetcode/": [
-    { text: "题单", children: ["/leetcode/0101.md", "/leetcode/0102.md", "/leetcode/0103.md", "/leetcode/0104.md", "/leetcode/0105.md", "/leetcode/0106.md", "/leetcode/0107.md", "/leetcode/0108.md", "/leetcode/0109.md"] },
-    { text: "数组/字符串", children: ["/leetcode/0106.md", "/leetcode/0107.md", "/leetcode/0108.md"] }
+    { text: "第一章 题单总览", children: ["/leetcode/0101.md", "/leetcode/0102.md", "/leetcode/0103.md", "/leetcode/0104.md", "/leetcode/0105.md", "/leetcode/0106.md", "/leetcode/0107.md", "/leetcode/0108.md", "/leetcode/0109.md"] },
+    { text: "第二章 数组与字符串", children: ["/leetcode/0106.md", "/leetcode/0107.md", "/leetcode/0108.md"] }
   ],
   "/studypath/": [
-    { text: "学习路线", children: ["/studypath/0101.md", "/studypath/0102.md", "/studypath/0103.md", "/studypath/0104.md", "/studypath/0105.md"] },
-    { text: "博客搭建", children: ["/studypath/0201.md"] },
-    { text: "常用软件配置", children: ["/studypath/0301.md", "/studypath/0302.md"] },
-    { text: "刷课", children: ["/studypath/0401.md"] },
-    { text: "刷题", children: ["/studypath/0501.md"] },
-    { text: "收藏网站", children: ["/studypath/0601.md", "/studypath/0602.md", "/studypath/0603.md"] }
+    { text: "第一章 学习路线", children: ["/studypath/0101.md", "/studypath/0102.md", "/studypath/0103.md", "/studypath/0104.md", "/studypath/0105.md"] },
+    { text: "第二章 博客搭建", children: ["/studypath/0201.md"] },
+    { text: "第三章 常用软件配置", children: ["/studypath/0301.md", "/studypath/0302.md"] },
+    { text: "第四章 刷课记录", children: ["/studypath/0401.md"] },
+    { text: "第五章 刷题计划", children: ["/studypath/0501.md"] },
+    { text: "第六章 收藏网站", children: ["/studypath/0601.md", "/studypath/0602.md", "/studypath/0603.md"] }
   ],
   "/yearplan/": [
-    { text: "2023", children: ["/yearplan/0101.md"] },
-    { text: "2024", children: ["/yearplan/0201.md"] },
-    { text: "2025", children: ["/yearplan/0301.md"] },
-    { text: "2026", children: ["/yearplan/0401.md"] },
-    { text: "2027", children: ["/yearplan/0501.md"] }
+    { text: "第一章 2023 年度计划", children: ["/yearplan/0101.md"] },
+    { text: "第二章 2024 年度计划", children: ["/yearplan/0201.md"] },
+    { text: "第三章 2025 年度计划", children: ["/yearplan/0301.md"] },
+    { text: "第四章 2026 年度计划", children: ["/yearplan/0401.md"] },
+    { text: "第五章 2027 年度计划", children: ["/yearplan/0501.md"] }
   ],
   "/zhichang/": [
-    { text: "职场", children: ["/zhichang/0101.md", "/zhichang/0102.md"] }
+    { text: "第一章 职场经验", children: ["/zhichang/0101.md", "/zhichang/0102.md"] }
   ],
   "/project/": [
-    { text: "项目实战", children: ["/project/0101.md"] }
+    { text: "第一章 项目实战", children: ["/project/0101.md"] }
   ],
   "/fenbushi/": [
-    { text: "分布式", children: ["/fenbushi/0101.md"] }
+    { text: "第一章 分布式基础理论", children: ["/fenbushi/0101.md"] }
   ],
   "/redis/": [
     { text: "第一章 Redis 基础", children: ["/redis/0101.md"] }
   ],
+  "/todo/": [
+    { text: "第一章 工作看板", children: ["/todo/0101.md"] }
+  ],
   "/others/": [
-    { text: "常用插件", children: ["/others/0101.md"] },
-    { text: "常用软件", children: ["/others/0201.md"] },
-    { text: "CI/CD", children: ["/others/0301.md"] }
+    { text: "第一章 常用插件", children: ["/others/0101.md"] },
+    { text: "第二章 常用软件", children: ["/others/0201.md"] },
+    { text: "第三章 CI/CD 实践", children: ["/others/0301.md"] }
   ]
     },
   }),
