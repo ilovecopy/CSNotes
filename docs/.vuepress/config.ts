@@ -94,7 +94,7 @@ export default defineUserConfig({
     ],
     sidebar: {
   "/java/": [
-    { text: "第一阶段 语言基石：OOP 与关键字", children: ["/java/0101.md", "/java/0102.md", "/java/0103.md", "/java/0104.md", "/java/0105.md", "/java/0106.md", "/java/0107.md", "/java/0108.md", "/java/0109.md", "/java/0110.md", "/java/0111.md", "/java/0112.md", "/java/0113.md", "/java/0114.md"] },
+    { text: "第一阶段 语言基石：OOP 与关键字", children: ["/java/0101.md", "/java/0102.md", "/java/0103.md", "/java/0104.md", "/java/0105.md", "/java/0106.md", "/java/0107.md", "/java/0108.md", "/java/0109.md", "/java/0110.md", "/java/0111.md", "/java/0112.md", "/java/0113.md", "/java/0114.md", "/java/0115.md", "/java/0116.md"] },
     { text: "第二阶段 集合框架与常用工具类", children: ["/java/0201.md", "/java/0202.md", "/java/0203.md", "/java/0204.md", "/java/0205.md", "/java/0206.md", "/java/0207.md", "/java/0208.md", "/java/0209.md", "/java/0210.md", "/java/0211.md", "/java/0212.md"] },
     { text: "第三阶段 设计模式（Summer IOC/AOP 核心思想）", children: ["/java/0301.md", "/java/0302.md", "/java/0303.md", "/java/0304.md"] },
     { text: "第四阶段 异常处理机制", children: ["/java/0401.md", "/java/0402.md"] },
@@ -156,12 +156,12 @@ export default defineUserConfig({
     { text: "网络安全", children: ["/network/0801.md"] }
   ],
   "/database/": [
-    { text: "第一阶段 SQL 语法与使用", children: ["/database/0101.md", "/database/0102.md", "/database/0103.md", "/database/0104.md", "/database/0105.md", "/database/0106.md", "/database/0107.md"] },
-    { text: "第二阶段 SQL 执行与优化", children: ["/database/0201.md", "/database/0202.md"] },
-    { text: "第三阶段 数据存储结构（MyDB 轮子核心）", children: ["/database/0301.md", "/database/0302.md", "/database/0303.md", "/database/0304.md", "/database/0305.md", "/database/0306.md"] },
+    { text: "第一阶段 SQL 语法基础", children: ["/database/0101.md", "/database/0102.md", "/database/0103.md", "/database/0104.md", "/database/0105.md", "/database/0106.md", "/database/0107.md"] },
+    { text: "第二阶段 SQL 执行链路", children: ["/database/0201.md", "/database/0202.md"] },
+    { text: "第三阶段 InnoDB 存储/行格式/页/BufferPool", children: ["/database/0301.md", "/database/0302.md", "/database/0303.md", "/database/0304.md", "/database/0305.md", "/database/0306.md"] },
     { text: "第四阶段 索引与数据结构", children: ["/database/0401.md", "/database/0402.md", "/database/0403.md", "/database/0404.md", "/database/0405.md", "/database/0406.md", "/database/0407.md"] },
-    { text: "第五阶段 事务、MVCC 与并发控制", children: ["/database/0501.md", "/database/0502.md", "/database/0503.md", "/database/0504.md", "/database/0505.md"] },
-    { text: "第六阶段 预写日志 WAL 与崩溃恢复", children: ["/database/0601.md"] },
+    { text: "第五阶段 事务/MVCC/锁/隔离级别", children: ["/database/0501.md", "/database/0502.md", "/database/0503.md", "/database/0504.md", "/database/0505.md"] },
+    { text: "第六阶段 预写日志 WAL 与崩溃恢复", children: ["/database/0601.md","/database/0602.md","/database/0603.md"] },
     { text: "第七阶段 数据建模与范式", children: ["/database/0701.md", "/database/0702.md"] },
     { text: "第八阶段 数据库概念全景", children: ["/database/0801.md"] },
     { text: "第九阶段 常见面试题专题（占位：待补）", children: [] }
