@@ -92,6 +92,8 @@ const shouldShowComment = computed(() =>
   padding: 24px 16px 48px;
   max-width: 960px;
   margin: 0 auto;
+  border-top: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
 }
 @media (min-width: 960px) {
   :deep(.vp-comment) {
