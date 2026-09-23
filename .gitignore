@@ -67,3 +67,4 @@ commitlint.config.js
 # Specific files to ignore
 docs/leetcode/.DS_Store
 docs/os/.DS_Store
+*.py
