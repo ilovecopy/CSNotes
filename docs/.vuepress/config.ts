@@ -94,7 +94,7 @@ export default defineUserConfig({
     ],
     sidebar: {
   "/java/": [
-    { text: "第一章 Java 语法", children: ["/java/0101.md", "/java/0102.md", "/java/0103.md", "/java/0104.md", "/java/0105.md", "/java/0106.md", "/java/0107.md", "/java/0108.md", "/java/0109.md", "/java/0110.md", "/java/0111.md", "/java/0112.md", "/java/0113.md", "/java/0114.md", "/java/0115.md", "/java/0116.md"] },
+    { text: "第一章 Java 基础", children: ["/java/0101.md", "/java/0102.md", "/java/0103.md", "/java/0104.md", "/java/0105.md", "/java/0106.md", "/java/0107.md", "/java/0108.md", "/java/0109.md", "/java/0110.md", "/java/0111.md", "/java/0112.md", "/java/0113.md", "/java/0114.md", "/java/0115.md", "/java/0116.md"] },
     { text: "第二章 集合", children: ["/java/0201.md", "/java/0202.md", "/java/0203.md", "/java/0204.md", "/java/0205.md", "/java/0206.md", "/java/0207.md", "/java/0208.md", "/java/0209.md", "/java/0210.md", "/java/0211.md"] },
     { text: "第三章 设计模式", children: ["/java/0301.md", "/java/0302.md", "/java/0303.md", "/java/0304.md"] },
     { text: "第四章 异常", children: ["/java/0401.md", "/java/0402.md"] },
