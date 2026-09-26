@@ -30,7 +30,9 @@
     "clean": "rm -rf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist",
     "lint": "prettier --check \"docs/**/*.md\"",
     "format": "prettier --write \"docs/**/*.md\"",
-    "ci": "npm run lint && npm run build",
+    "ac:lint": "npx autocorrect --lint .",
+    "ac:fix": "npx autocorrect --fix .",
+    "ci": "npm run lint && npm run ac:lint && npm run build",
     "serve": "serve docs/.vuepress/dist",
     "prepare": "husky",
     "start": "npm run dev"
@@ -50,6 +52,7 @@
     "@vuepress/plugin-sass-palette": "2.0.0-rc.106",
     "@vuepress/plugin-search": "2.0.0-rc.106",
     "@vuepress/theme-default": "2.0.0-rc.106",
+    "autocorrect-node": "^2.14.0",
     "husky": "^9.1.6",
     "katex": "^0.16.47",
     "lint-staged": "^15.2.10",
@@ -66,7 +69,8 @@
   },
   "lint-staged": {
     "*.md": [
-      "prettier --write"
+      "prettier --write",
+      "npx autocorrect --fix"
     ]
   }
 }
