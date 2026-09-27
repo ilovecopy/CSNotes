@@ -546,8 +546,7 @@ export default defineUserConfig({
 
   plugins: [
     mdEnhancePlugin({
-      sup: true,
-      sub: true,
+
     }),
 
     commentPlugin({
