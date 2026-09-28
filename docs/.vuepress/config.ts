@@ -113,6 +113,7 @@ export default defineUserConfig({
             '/java/0115.md',
             '/java/0116.md',
             '/java/0117.md',
+            '/java/0118.md',
           ],
         },
         {
@@ -129,6 +130,7 @@ export default defineUserConfig({
             '/java/0209.md',
             '/java/0210.md',
             '/java/0211.md',
+            '/java/0212.md',
           ],
         },
         {
@@ -150,6 +152,7 @@ export default defineUserConfig({
         },
         { text: '第七章 RPC', children: ['/java/0701.md'] },
         { text: '第八章 消息队列', children: ['/java/0801.md'] },
+        { text: '第九章 JDK17 新特性', children: ['/java/0901.md'] },
       ],
       '/ssm/': [
         {
@@ -425,6 +428,9 @@ export default defineUserConfig({
             '/database/0106.md',
             '/database/0107.md',
             '/database/0108.md',
+            '/database/0109.md',
+            '/database/0110.md',
+            '/database/0111.md'
           ],
         },
         {
@@ -432,8 +438,9 @@ export default defineUserConfig({
           children: [
             '/database/0201.md',
             '/database/0202.md',
-            '/database/0206.md',
-            '/database/0207.md',
+            '/database/0203.md',
+            '/database/0204.md',
+            '/database/0205.md'
           ],
         },
         {
@@ -457,7 +464,7 @@ export default defineUserConfig({
             '/database/0405.md',
             '/database/0406.md',
             '/database/0407.md',
-            '/database/0409.md',
+            '/database/0408.md',
           ],
         },
         {
