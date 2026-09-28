@@ -6,8 +6,7 @@ import { searchPlugin } from '@vuepress/plugin-search';
 import { commentPlugin } from '@vuepress/plugin-comment';
 import { defaultTheme } from '@vuepress/theme-default';
 import { defineUserConfig } from 'vuepress';
-import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'; //markown 增强
-// const base = <"/" | `/${string}/`>process.env["BASE"] || "/";
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -79,10 +78,6 @@ export default defineUserConfig({
       //   link: "/zhichang/0101.md",
       // },
       {
-        text: '分布式',
-        link: '/fenbushi/0101.md',
-      },
-      {
         text: 'Redis',
         link: '/redis/0101.md',
       },
@@ -141,9 +136,7 @@ export default defineUserConfig({
         { text: '第五章 并发', children: ['/java/0501.md', '/java/0502.md'] },
         {
           text: '第六章 JVM',
-          children: [
-            '/java/0601.md',
-          ],
+          children: ['/java/0601.md'],
         },
         { text: '第七章 RPC', children: ['/java/0701.md'] },
         { text: '第八章 消息队列', children: ['/java/0801.md'] },
@@ -425,7 +418,7 @@ export default defineUserConfig({
             '/database/0108.md',
             '/database/0109.md',
             '/database/0110.md',
-            '/database/0111.md'
+            '/database/0111.md',
           ],
         },
         {
@@ -435,7 +428,7 @@ export default defineUserConfig({
             '/database/0202.md',
             '/database/0203.md',
             '/database/0204.md',
-            '/database/0205.md'
+            '/database/0205.md',
           ],
         },
         {
@@ -536,7 +529,6 @@ export default defineUserConfig({
         { text: '第一章 职场经验', children: ['/zhichang/0101.md', '/zhichang/0102.md'] },
       ],
       '/project/': [{ text: '第一章 项目实战', children: ['/project/0101.md'] }],
-      '/fenbushi/': [{ text: '第一章 分布式基础理论', children: ['/fenbushi/0101.md'] }],
       '/redis/': [{ text: '第一章 Redis 基础', children: ['/redis/0101.md'] }],
       '/todo/': [{ text: '第一章 工作看板', children: ['/todo/0101.md'] }],
       '/others/': [
@@ -548,9 +540,7 @@ export default defineUserConfig({
   }),
 
   plugins: [
-    mdEnhancePlugin({
-
-    }),
+    mdEnhancePlugin({}),
 
     commentPlugin({
       provider: 'Giscus',
