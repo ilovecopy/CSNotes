@@ -143,11 +143,6 @@ export default defineUserConfig({
           text: '第六章 JVM',
           children: [
             '/java/0601.md',
-            '/java/0602.md',
-            '/java/0603.md',
-            '/java/0604.md',
-            '/java/0605.md',
-            '/java/0606.md',
           ],
         },
         { text: '第七章 RPC', children: ['/java/0701.md'] },
