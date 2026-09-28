@@ -25,10 +25,6 @@ export default defineUserConfig({
     contributors: false,
     sidebarDepth: 2,
     navbar: [
-      {
-        text: 'TODO',
-        link: '/todo/0101.md',
-      },
       // {
       //   text: "数据结构",
       //   link: "/datastructure/0101.md",
@@ -58,12 +54,20 @@ export default defineUserConfig({
         link: '/ssm/0101.md',
       },
       {
-        text: 'React',
-        link: '/react/0101.md',
+        text: 'Redis',
+        link: '/redis/0101.md',
       },
+      // {
+      //   text: 'React',
+      //   link: '/react/0101.md',
+      // },
       {
         text: '学习路线',
         link: '/studypath/0101.md',
+      },
+      {
+        text: 'TODO',
+        link: '/todo/0101.md',
       },
       // {
       //   text: "LeetCode",
@@ -77,10 +81,6 @@ export default defineUserConfig({
       //   text: "职场",
       //   link: "/zhichang/0101.md",
       // },
-      {
-        text: 'Redis',
-        link: '/redis/0101.md',
-      },
       {
         text: '实用工具',
         link: '/others/0101.md',
