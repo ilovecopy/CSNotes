@@ -418,6 +418,7 @@ export default defineUserConfig({
             '/database/0109.md',
             '/database/0110.md',
             '/database/0111.md',
+            '/database/0112.md',
           ],
         },
         {
