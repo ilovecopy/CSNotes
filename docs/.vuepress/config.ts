@@ -132,14 +132,14 @@ export default defineUserConfig({
           children: ['/java/0301.md', '/java/0302.md', '/java/0303.md', '/java/0304.md'],
         },
         { text: '第四章 异常', children: ['/java/0401.md', '/java/0402.md'] },
-        { text: '第五章 并发', children: ['/java/0501.md', '/java/0502.md'] },
+        { text: '第五章 并发', children: ['/java/0501.md', '/java/0502.md', '/java/0503.md'] },
         {
           text: '第六章 JVM',
           children: ['/java/0601.md'],
         },
         { text: '第七章 RPC', children: ['/java/0701.md'] },
         { text: '第八章 消息队列', children: ['/java/0801.md'] },
-        { text: '第九章 JDK17 新特性', children: ['/java/0901.md'] },
+        { text: '第九章 JDK17 新特性', children: ['/java/0901.md', '/java/0902.md'] },
       ],
       '/ssm/': [
         {
