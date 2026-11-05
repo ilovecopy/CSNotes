@@ -124,7 +124,6 @@ export default defineUserConfig({
             '/java/0209.md',
             '/java/0210.md',
             '/java/0211.md',
-            '/java/0212.md',
           ],
         },
         {
@@ -139,7 +138,7 @@ export default defineUserConfig({
         },
         { text: '第七章 RPC', children: ['/java/0701.md'] },
         { text: '第八章 消息队列', children: ['/java/0801.md'] },
-        { text: '第九章 JDK17 新特性', children: ['/java/0901.md', '/java/0902.md'] },
+        { text: '第九章 工具类', children: ['/java/0901.md', '/java/0902.md', '/java/0903.md', '/java/0904.md'] },
       ],
       '/ssm/': [
         {
@@ -186,7 +185,6 @@ export default defineUserConfig({
             '/ssm/0603.md',
             '/ssm/0604.md',
             '/ssm/0605.md',
-            '/ssm/0606.md',
           ],
         },
       ],
