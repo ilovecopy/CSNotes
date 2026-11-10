@@ -134,11 +134,25 @@ export default defineUserConfig({
         { text: '第五章 并发', children: ['/java/0501.md', '/java/0502.md', '/java/0503.md'] },
         {
           text: '第六章 JVM',
-          children: ['/java/0601.md'],
+          children: [
+            '/java/0601.md',
+            '/java/0602.md',
+            '/java/0603.md',
+            '/java/0604.md',
+            '/java/0605.md',
+            '/java/0606.md',
+            '/java/0607.md',
+            '/java/0608.md',
+            '/java/0609.md',
+            '/java/0610.md',
+          ],
         },
         { text: '第七章 RPC', children: ['/java/0701.md'] },
         { text: '第八章 消息队列', children: ['/java/0801.md'] },
-        { text: '第九章 工具类', children: ['/java/0901.md', '/java/0902.md', '/java/0903.md', '/java/0904.md'] },
+        {
+          text: '第九章 工具类',
+          children: ['/java/0901.md', '/java/0902.md', '/java/0903.md', '/java/0904.md'],
+        },
       ],
       '/ssm/': [
         {
@@ -475,6 +489,7 @@ export default defineUserConfig({
           ],
         },
         { text: '第七章 锁', children: ['/database/0701.md'] },
+        { text: '第八章 MySQL 架构', children: ['/database/0801.md'] },
       ],
       '/leetcode/': [
         {
